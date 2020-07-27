@@ -35,10 +35,10 @@ export class TabsComponent implements AfterContentInit {
 
     // these variables refer to the templates of the same name defined in the HTML.
     // to open a tab use one of these variables as the template variable.
-    @ViewChild('blankTab', {static: false}) blankTab;
-    @ViewChild('layerTab', {static: false}) layerTab;
+    @ViewChild('blankTab') blankTab;
+    @ViewChild('layerTab') layerTab;
     @ViewChild('helpTab', {static: true}) helpTab;
-    @ViewChild('exporterTab', {static: false}) exporterTab;
+    @ViewChild('exporterTab') exporterTab;
 
     ds: DataService = null;
     vms: ViewModelsService = null;
@@ -50,7 +50,7 @@ export class TabsComponent implements AfterContentInit {
     }
 
     dynamicTabs: TabComponent[] = [];
-    @ViewChild(DynamicTabsDirective, {static: false}) dynamicTabPlaceholder: DynamicTabsDirective;
+    @ViewChild(DynamicTabsDirective) dynamicTabPlaceholder: DynamicTabsDirective;
 
 
     ngAfterContentInit() {

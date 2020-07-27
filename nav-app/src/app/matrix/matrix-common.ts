@@ -1,9 +1,10 @@
-import { Input, Output, EventEmitter } from '@angular/core';
+import { Input, Output, EventEmitter, Directive } from '@angular/core';
 import { Matrix, Technique, Tactic } from '../data.service';
 import { ViewModel } from '../viewmodels.service';
 import { ConfigService } from '../config.service';
 declare var tinycolor: any; //use tinycolor2
 
+@Directive()
 export abstract class MatrixCommon {
     @Input() matrix: Matrix;
     @Input() viewModel: ViewModel;
